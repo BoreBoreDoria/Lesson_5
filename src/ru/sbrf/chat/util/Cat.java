@@ -3,11 +3,24 @@ package ru.sbrf.chat.util;
 
 public class Cat extends Animal {
 
-    void test() {
-        publ();
-        prot();
-        def();
+    private String color;
 
+    @Override
+    public void voice() {
+        System.out.println("Кошка говорит - Мяу");
     }
 
+    public Cat(String name, String color) {
+        super("Cat", name);
+        this.color = color;
+    }
+
+    @Override
+    public void setWeight(byte weight) {
+        super.setWeight(weight);
+    }
+
+    public String getColor() {
+        return color;
+    }
 }

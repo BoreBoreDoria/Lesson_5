@@ -1,58 +1,23 @@
 package ru.sbrf.chat.util;
 
+import java.util.Objects;
+
 public class Animal {
-    String text1;
-    public String text2;
+    protected final String type;
+    protected String name;
+    protected byte weight;
 
-    protected String text3;
 
-    private String text4;
-
-    void def() {
-
+    protected Animal(String type, String name) {
+        this.type = type;
+        this.name = name;
     }
 
-    private void priv() {
-
+    protected void voice() {
+        System.out.println("Животное не разговаривает");
     }
 
-    protected void prot() {
-
-    }
-
-    public void publ() {
-
-    }
-
-    public String getText1() {
-        return text1;
-    }
-
-    public String getText2() {
-        return text2;
-    }
-
-    public String getText3() {
-        return text3;
-    }
-
-    public String getText4() {
-        return text4;
-    }
-
-    public void setText1(String text1) {
-        this.text1 = text1;
-    }
-
-    public void setText2(String text2) {
-        this.text2 = text2;
-    }
-
-    public void setText3(String text3) {
-        this.text3 = text3;
-    }
-
-    public void setText4(String text4) {
-        this.text4 = text4;
+    public void setWeight(byte weight) {
+        this.weight = weight;
     }
 }
